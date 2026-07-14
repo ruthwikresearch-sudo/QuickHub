@@ -1,7 +1,14 @@
 import dotenv from "dotenv";
+import { envSchema } from "./env.schema";
 
 dotenv.config();
 
-export const env = {
-  PORT: Number(process.env.PORT) || 5000,
-};
+const parsed = envSchema.safeParse(process.env);
+
+if (!parsed.success) {
+  console.error("❌ Invalid environment variables");
+  console.error(parsed.error.format());
+  process.exit(1);
+}
+
+export const env = parsed.data;
