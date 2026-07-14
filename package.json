@@ -1,13 +1,29 @@
 {
   "name": "quickhub",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "QuickHub Super App",
+  "workspaces": [
+    "apps/*",
+    "backend",
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "echo \"Backend not created yet. Next task will create it.\"",
+    "build": "echo \"Build pipeline coming soon\"",
+    "lint": "echo \"Lint configuration coming soon\"",
+    "format": "echo \"Formatter configuration coming soon\"",
+    "test": "echo \"Testing setup coming soon\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "quickhub",
+    "super-app",
+    "typescript",
+    "react-native",
+    "express"
+  ],
+  "license": "MIT"
 }
